@@ -1,7 +1,6 @@
 Tower_Of_Brahma
 ===============
-<video src="movie7.mov" width="640" height="300" controls preload></video>
-
+<video src="movie7.mov" poster="sampleimage.pdf" width="640" height="300" controls preload></video>
 
 Creates a movie of Tower of Brahma using tikz (LaTeX), which can be played in pdf (Use Adobe to play the movie).
 
