@@ -1,7 +1,7 @@
 Tower_Of_Brahma
 ===============
 
-[![ScreenShot](https://raw.githubusercontent.com/sivaramambikasaran/Tower_Of_Brahma/master/sampleImage.png)](http://vimeo.com/108663410)
+[![ScreenShot](https://raw.githubusercontent.com/sivaramambikasaran/Tower_Of_Brahma/master/sampleImage.png)](https://www.dropbox.com/s/emmo8s2tdpomb9g/movie7.mov?dl=0)
 
 Creates a movie of Tower of Brahma using tikz (LaTeX), which can be played in pdf (Use Adobe to play the movie).
 
