@@ -1,6 +1,6 @@
 Tower_Of_Brahma
 ===============
-<iframe src="//player.vimeo.com/video/108663410" width="500" height="213" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/108663410">movie7.mov</a> from <a href="http://vimeo.com/user33224917">Sivaram Ambikasaran</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<video src="http://vimeo.com/108663410" poster="sampleimage.pdf" width="640" height="300" controls preload></video>
 
 Creates a movie of Tower of Brahma using tikz (LaTeX), which can be played in pdf (Use Adobe to play the movie).
 
