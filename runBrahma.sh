@@ -7,9 +7,6 @@ chmod 755 script.sh
 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=finished.pdf drawing*pdf
 pdflatex movie.tex
 pdflatex movie.tex
-rm *.tex
 rm *.aux
 rm *.log
-rm drawing*.pdf
-rm script.sh
 rm a.out
