@@ -1,6 +1,7 @@
 Tower_Of_Brahma
 ===============
-<video src="http://vimeo.com/108663410" poster="sampleimage.pdf" width="640" height="300" controls preload></video>
+
+[![ScreenShot](sampleimage.pdf)](http://vimeo.com/108663410)
 
 Creates a movie of Tower of Brahma using tikz (LaTeX), which can be played in pdf (Use Adobe to play the movie).
 
