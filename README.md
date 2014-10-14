@@ -1,11 +1,9 @@
 Tower_Of_Brahma
 ===============
 
-Click on the image to play the video.
-
 <img style="float: middle" src = "https://raw.githubusercontent.com/sivaramambikasaran/Tower_Of_Brahma/master/animationTowerOfBrahma.gif" width=750>
 
-Creates a movie of Tower of Brahma using tikz (LaTeX), which can be played in pdf (Use Adobe to play the movie).
+Creates a gif animation of Tower of Brahma using TikZ.
 
 To run the code, key in
 
