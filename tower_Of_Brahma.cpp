@@ -76,6 +76,7 @@ void draw(int N, states allStates, std::vector<double> radii, std::vector<double
 		myfile << "\\begin{document}" << std::endl;
         myfile << "\\begin{tikzpicture}[scale=0.5]" << std::endl;
 		//	Draw the baseline
+		myfile << "\\draw [draw = white, fill=white] (" << 1.5*center[0] << "," << -0.5*height << ") rectangle (" << 1.5*center[2] << "," << (N+1.5)*height << ");" << std::endl;
 		myfile << "\\draw (" << 1.5*center[0] << ", " << -0.5*height << ") -- (" << 1.5*center[2] << ", " << -0.5*height << ");" << std::endl;
 		//	Draw the sticks
 		for (int l=0; l<3; ++l) {
@@ -125,24 +126,29 @@ void write_Script_File(unsigned N) {
 	}
 	myfile.open("script.sh", std::ios::out);
 	myfile << "#!/bin/bash" << std::endl;
+	myfile << "cd images/" << std::endl;
 	myfile << "for i in `seq " << nStart << " " << nStart+nMoves<<" `;" << std::endl;
 	myfile << "do" << std::endl;
-	myfile << "	pdflatex drawing$i.tex" << std::endl;
+	myfile << "\t pdflatex drawing$i.tex" << std::endl;
+	myfile << "\t convert drawing$i.pdf drawing$i.gif" << std::endl;
+	myfile << "\t rm drawing$i.aux drawing$i.log" << std::endl;
 	myfile << "done" << std::endl;
+	myfile << "gifsicle --delay=100 --loop drawing*.gif > ./../animationTowerOfBrahma.gif" << std::endl;
+	myfile << "cd ./../" << std::endl;
 	myfile.close();
 }
 
-void make_Movie() {
-	std::ofstream myfile;
-	myfile.open("movie.tex");
-	myfile << "\\documentclass{standalone}" << std::endl;
-	myfile << "\\usepackage{animate}" << std::endl;
-	myfile << "\\begin{document}" << std::endl;
-	myfile << "\\begin{frame}" << std::endl << std::endl;
-	myfile << "\\animategraphics[controls,scale=1]{2}{./finished}{}{}" << std::endl << std::endl;
-	myfile << "\\end{frame}" << std::endl;
-	myfile << "\\end{document}" << std::endl;
-}
+// void make_Movie() {
+// 	std::ofstream myfile;
+// 	myfile.open("movie.tex");
+// 	myfile << "\\documentclass{standalone}" << std::endl;
+// 	myfile << "\\usepackage{animate}" << std::endl;
+// 	myfile << "\\begin{document}" << std::endl;
+// 	myfile << "\\begin{frame}" << std::endl << std::endl;
+// 	myfile << "\\animategraphics[controls,scale=1]{2}{./finished}{}{}" << std::endl << std::endl;
+// 	myfile << "\\end{frame}" << std::endl;
+// 	myfile << "\\end{document}" << std::endl;
+// }
 
 int main(int argc, char* argv[]) {
 	int N;
@@ -170,8 +176,8 @@ int main(int argc, char* argv[]) {
 	//	Print all the steps on terminal.
 	print_Each_Step(allStates);
     
-	//	Make the movie file.
-	make_Movie();
+	// //	Make the movie file.
+	// make_Movie();
 
     double minRadius    =   1.0;
     double maxRadius    =   5.0;
@@ -184,7 +190,7 @@ int main(int argc, char* argv[]) {
     stickCenter.push_back(2.5*maxRadius);
 
     double height       	=	minRadius;
-    std::string fileName    =   "drawing";
+    std::string fileName    =   "./images/drawing";
     draw(N, allStates, radii, stickCenter, height, fileName);
 	write_Script_File(N);
 }

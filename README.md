@@ -3,7 +3,7 @@ Tower_Of_Brahma
 
 Click on the image to play the video.
 
-[![ScreenShot](https://raw.githubusercontent.com/sivaramambikasaran/Tower_Of_Brahma/master/sampleImage.png)](https://www.dropbox.com/s/emmo8s2tdpomb9g/movie7.mov?dl=0)
+<img style="float: middle" src = "https://raw.githubusercontent.com/sivaramambikasaran/Tower_Of_Brahma/master/animationTowerOfBrahma.gif" width=750>
 
 Creates a movie of Tower of Brahma using tikz (LaTeX), which can be played in pdf (Use Adobe to play the movie).
 
@@ -17,6 +17,6 @@ This will ask you to enter the number of discs:
 
 Key in some positive integer. It takes a while to generate the images. This is to be addressed later.
 
-The file titled `finished.pdf` contains all the steps as a separate image.
+The folder titled `images` contains all the steps as a separate image.
 
-The file titled `movie.pdf` contains the movie. Use Adobe to open the file and play the movie.
+The file titled `animationTowerOfBrahma.gif` contains the animation.
